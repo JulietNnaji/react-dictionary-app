@@ -9,8 +9,8 @@ return (
         {props.meaning.definitions.map(function(definition, index)
         {
             return (
-                <ul>
-                <li key = {index}>
+                <ul key = {index}>
+                    <li>
                     <p>
                         {definition.definition}
                         </p>

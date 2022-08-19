@@ -5,7 +5,7 @@ import "./Dictionary.css";
 export default function FirstDisplay(props){
     if (props.result){
         return <div>
-         <h2 className = "word">
+         <h2 className = "text-capitalize word">
          {props.result.word}
          </h2>
          {
