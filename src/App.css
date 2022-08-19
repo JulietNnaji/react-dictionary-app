@@ -1,9 +1,10 @@
-.App {
-  text-align: center;
+.App{
+  max-width: 600px;
 }
 
 h1, footer{
   margin-top: 30px;
+  text-align: center;
 }
 .owner a{
   text-decoration: none;
