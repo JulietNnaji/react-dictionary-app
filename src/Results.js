@@ -1,9 +1,10 @@
 import React from "react";
 import Synonyms from "./Synonyms";
+import './Results.css';
 
 export default function Results (props){
 return (
-    <div>
+    <section>
         <h3>
             {props.meaning.partOfSpeech}
         </h3>
@@ -12,15 +13,14 @@ return (
             return (
                 <ul key = {index}>
                     <li>
-                    <p>
+                    <p className="definition">
                         {definition.definition}
                         </p>
-                        <p>
-                        <em>
+                        <p className="example">
                             {definition.example}
-                        </em>
                         </p>
                         </li>
+                        
                         <strong>
                 <Synonyms synonyms= {definition.synonyms} /> 
                  </strong>
@@ -28,6 +28,6 @@ return (
                     </ul>
             );
         })}
-    </div>
+        </section>
 );
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import './Synonyms.css';
+import './Results.css';
 
 export default function Phonetics (props){
     return (
@@ -9,7 +9,9 @@ export default function Phonetics (props){
                     Listen
                 </a>
             </button>
+            <span className ="phoneticText">
             {props.phonetic.text}
+        </span>
         </div>
     );
 }

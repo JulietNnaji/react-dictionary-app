@@ -6,16 +6,19 @@ import "./Dictionary.css";
 export default function FirstDisplay(props){
     if (props.result){
         return <div>
+            <section>
          <h2 className = "text-capitalize word">
          {props.result.word}
          </h2>
-         {props.result.phonetics.map(function(phonetic, index){
+         {props.result.phonetics.map(function (phonetic, index) {
             return (
                 <div key={index}>
                     <Phonetics phonetic={phonetic} />
                     </div>
             );
          })}
+         </section>
+
          {props.result.meanings.map(function(meaning, index){
                 return (
                     <div key ={index}>
