@@ -10,7 +10,7 @@ export default function Images (props){
                 return ( 
                 <div className = "col-4" key={index}>
                 <a href ={image.src.original} target="_blank" rel="noreferrer">
-                    <img src= {image.src.tiny} className = "img-fluid" alt="dictionary"/>
+                    <img src= {image.src.tiny} className = "img-fluid" alt= {props.words}/>
             </a>
             </div>
                 )

@@ -7,9 +7,9 @@ export default function FirstDisplay(props){
     if (props.result){
         return <div>
             <section>
-         <h2 className = "text-capitalize word">
+         <h1 className = "text-capitalize word">
          {props.result.word}
-         </h2>
+         </h1>
          {props.result.phonetics.map(function (phonetic, index) {
             return (
                 <div key={index}>

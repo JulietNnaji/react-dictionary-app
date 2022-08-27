@@ -2,3 +2,7 @@ img{
     border-radius: 7px;
     margin-bottom: 20px;
 }
+a{
+    text-decoration: none;
+    opacity: 100%;
+}

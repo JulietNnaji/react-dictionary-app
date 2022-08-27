@@ -3,6 +3,10 @@ import axios from "axios";
 import FirstDisplay from "./FirstDisplay";
 import Images from "./Images";
 import './Dictionary.css';
+import Word from  './Word.jpg';
+import Search from  './Search.jpg';
+import Definition from  './Definition.jpg';
+
 
 export default function Dictionary(){
     let [word, setWords] = useState ("dictionary");
@@ -47,6 +51,23 @@ if (loader){
     return (
         <div>
             <div className ="Dictionary">
+                    <div className ="row firstImage">
+                        <div className = "col-4">
+                    <img src={Word}
+                    className ="img-fluid" alt= "words">                  
+                    </img>
+                    </div>
+                    <div className = "col-4">
+                    <img src= {Search}
+                    className ="img-fluid" alt= "search">                  
+                    </img>
+                    </div>
+                    <div className = "col-4">
+                    <img src= {Definition}
+                    className ="img-fluid" alt= "definition">                  
+                    </img>
+                    </div>
+                    </div>
                 <section>
 <form onSubmit= {submitWord} className ="formSearch">
     <input type ="search" placeholder =" Search for a word..." onChange ={wordChange} />
@@ -54,7 +75,7 @@ if (loader){
 </form>
 </section>
 <FirstDisplay result ={result}/>
-<Images images={images} />
+<Images images={images} words={word} />
 </div>
         </div>
     );

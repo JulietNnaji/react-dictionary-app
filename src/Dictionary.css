@@ -3,7 +3,7 @@ margin: 20px;
 }
 
 section{
-    background: white;
+    background: rgb(245, 207, 245);
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0 0 0 / 10%);
@@ -13,7 +13,6 @@ section{
 input{
     width: 90%;
     border: 1px solid rgb(214, 209, 209);
-    color: grey;
     padding: 2.5px 10px;
 }
 
@@ -30,4 +29,8 @@ width: 75%;
 
 .formSearch{
     text-align: center;
+}
+
+.firstImage{
+    padding-top: 20px;
 }

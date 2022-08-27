@@ -21,7 +21,7 @@ return (
                         </p>
                         </li>
                         
-                        <strong>
+                        <strong className="synonym">
                 <Synonyms synonyms= {definition.synonyms} /> 
                  </strong>
                
