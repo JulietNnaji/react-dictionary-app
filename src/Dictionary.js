@@ -1,21 +1,33 @@
 import React, { useState } from "react";
 import axios from "axios";
 import FirstDisplay from "./FirstDisplay";
+import Images from "./Images";
 import './Dictionary.css';
 
 export default function Dictionary(){
-    let [word, setWords] = useState ("search");
+    let [word, setWords] = useState ("dictionary");
 let [result, displayResult] = useState (null);
 let [loader, setLoader] = useState(false);
+let  [images, setImages] = useState (null);
+
 
 function displayWord (response) {
     displayResult(response.data[0]);
 }
 
+function displayImage (response){
+setImages (response.data.photos);
+}
+
 function searchWord(){
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
     axios.get(apiUrl).then(displayWord);
-     } 
+    
+let imageApiKey = "563492ad6f9170000100000184e46b8a93284a14be357f1dd236de04";
+let imageApiUrl = `https://api.pexels.com/v1/search?query=${word}&per_page=9`;
+axios.get(imageApiUrl, {headers: {"Authorization" : `Bearer ${imageApiKey}`
+}}).then(displayImage);
+} 
  
 
     function submitWord(event){
@@ -42,6 +54,7 @@ if (loader){
 </form>
 </section>
 <FirstDisplay result ={result}/>
+<Images images={images} />
 </div>
         </div>
     );
